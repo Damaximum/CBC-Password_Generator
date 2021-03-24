@@ -1,1 +1,1 @@
-# CBC-Password_Generator
+# CBC-Password Generator
