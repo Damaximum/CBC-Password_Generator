@@ -11,6 +11,20 @@ Github: https://github.com/Damaximum/CBC-Password_Generator
 
 Webpage: https://damaximum.github.io/CBC-Password_Generator/
 
+## Screenshots
+
+On Initial Loading:
+![Alt text](./screenshots/1-main.png?raw=true "Initial Load")
+
+Asking for length of characters:
+![Alt text](./screenshots/2-length.png?raw=true "Length Prompt")
+
+Asking Criterias:
+![Alt text](./screenshots/3-criteria.png?raw=true "Criteria Confirmations")
+
+Final Result:
+![Alt text](./screenshots/4-main.png?raw=true "Final Result")
+
 ## How it was done
 
 I broke down the acceptance criteria as well as the objective of the homework into simple tasks: Criteria, Determining characters, Password generation, Printing the password, Checks and Debugs.
