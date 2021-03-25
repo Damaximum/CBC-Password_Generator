@@ -15,14 +15,17 @@ function generatePassword() {
 
 // Function to check what the user wants.
   function Criteria() {
+    finalSet = [];
     PassEmpty = [];
 
+    // Choose if lowercase letters are in the password
     var letterselect = confirm('Do you want lowercase letters in the password?');
     if(letterselect === true){
       finalSet = finalSet.concat(letter);
       console.log(letterselect);
     }
 
+    // Choose if uppercase letters are in the password
     var CapLetterselect = confirm('Do you want uppercase letters in the password?');
 
     if(CapLetterselect === true){
@@ -30,6 +33,7 @@ function generatePassword() {
       console.log(CapLetterselect);
     }
 
+    // Choose if numbers are in the password
     var numberselect = confirm('Do you want numbers in the password?');
 
     if(numberselect === true){
@@ -37,6 +41,7 @@ function generatePassword() {
       console.log(numberselect);
     }
 
+    // Choose if special characters are in the password
     var specialselect = confirm('Do you want special letters in the password?');
 
     if(specialselect === true){
@@ -44,17 +49,46 @@ function generatePassword() {
       console.log(specialselect);
     }
 
+    console.log(finalSet);
+    
+    // Checking if the user has selected at least one criteria.
+    if (letterselect !== true && CapLetterselect !== true && numberselect !== true && specialselect !== true) {
+
+      var cont = confirm('You MUST choose at least one criteria!');
+
+      if (cont === false) {
+        return ' ';
+      } else {
+        Criteria();
+      }
+    
+    }
+
   }
 
 
-  var PassLength = prompt('How long you want the password to be?', 8);
+
+  var PassLength = prompt('How long you want the password to be? (minimum 8, maximum 128)', 8);
   
-  if (!isNaN(PassLength)) {
-    Criteria();
-    PassGen();
-  } else {
-    alert('That is not a number!');
-  }
+  if (PassLength !== null) {
+    if (!isNaN(PassLength)) {
+      if (PassLength < 8) {
+        alert('The number you have chosen is too small!');
+        console.log('Short num');
+      } else if (PassLength > 128) {
+        alert('The number you have chosen is too large!')
+        console.log('Long num');
+        return ' ';
+      } else {
+        Criteria();
+        PassGen();
+        console.log('Good Number. Chosen: ' + PassLength);
+      }
+      
+    } else {
+      alert('That is not a number!');
+    }
+  } 
 
 
 
