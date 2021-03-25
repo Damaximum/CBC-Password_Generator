@@ -23,7 +23,7 @@ Asking Criterias:
 ![Alt text](./screenshots/3-criteria.png?raw=true "Criteria Confirmations")
 
 Final Result:
-![Alt text](./screenshots/4-main.png?raw=true "Final Result")
+![Alt text](./screenshots/4-final.png?raw=true "Final Result")
 
 ## How it was done
 
