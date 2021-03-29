@@ -67,9 +67,9 @@ function generatePassword() {
   }
 
 
-
+// setting the length of the password
   var PassLength = prompt('How long you want the password to be? (minimum 8, maximum 128)', 8);
-  
+  // checking if the input is a number and if it is within 8 and 128
   if (PassLength !== null) {
     if (!isNaN(PassLength)) {
       if (PassLength < 8) {
@@ -91,7 +91,7 @@ function generatePassword() {
   } 
 
 
-
+// generates and "saves" the password
   function PassGen() {
     for (var i = 0; i < PassLength; i++) {
       var generated = finalSet[Math.floor(Math.random() * finalSet.length)];
